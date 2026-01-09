@@ -1,0 +1,314 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  color: white;
+  background-image: url(../../public/main_header.gif) !important;
+  background-size: cover !important;      /* fills entire navbar */
+  background-position: center !important; /* centers the GIF */
+  background-repeat: no-repeat !important;/* no repeat */
+  height: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Brand link with lion icon styled like search button */
+.nav-brand .brand-link {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  height: 100px;
+  color: rgb(113, 180, 172);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;                /* same as search button */
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background: radial-gradient(circle, 
+  #2e3a59,   /* deep muted navy */
+  #3d5a6c,   /* elegant slate */
+  #4f7d63,   /* premium green-teal */
+  #9bbf71    /* soft luxury olive highlight */
+) !important;
+
+}
+
+.nav-brand .brand-link:hover {
+  background-image: url(../../public/hover.jpg) !important;         /* match search button */
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  color: rgb(132, 252, 208) !important;
+  transform: scale(1.05);
+}
+
+/* Lion icon inside brand link */
+.lion-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+/* ✅ Navbar links container styled in one horizontal line */
+.navbar-links {
+  display: flex;
+  flex-direction: row; /* ensure horizontal layout */
+  font-size: 24px !important;
+  font-weight: bold;
+  align-items: center !important;
+  gap: 40px !important;           /* spacing between each link 
+  */
+  margin-right: 200px !important;
+}
+
+/* Navbar link buttons styled like brand link */
+.navbar-links .nav-link {
+  display: flex;
+  font-weight: bold;
+  height: 70px;
+  width: 125px;
+  color: rgb(246, 250, 250) !important;
+  background: radial-gradient(circle, 
+  #4e5568,   /* deep muted navy */
+  #557081,   /* elegant slate */
+  #4f7d63,   /* premium green-teal */
+  #9bbf71    /* soft luxury olive highlight */
+) !important;
+
+  align-items: center;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.2);
+}
+  
+.navbar-links .nav-link:hover {
+  color: rgb(185, 199, 198); 
+  text-align: center !important;
+  background-image: url(../../public/nav.png)!important;         /* match search button */
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+   color: rgb(132, 252, 208) !important;
+  transform: scale(1.05);
+}
+
+/* Heart icon inside favorite button if used */
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  .nav-button {
+    flex: 1;
+    justify-content: center;
+  background-image:url(../../public/nav.png) ;
+  }
+
+  .nav-brand .brand-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+  /* transform: scale(1.2);
+  } */
+/* Footer Container */
+.footer-container {
+background-image:url(../../public/footer.jpg) !important;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  padding: 3rem 2rem 1rem 2rem;
+} 
+h1 {
+  position: relative;
+  text-align: center;
+}
+h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 50%;
+  margin: 8px auto 0;
+  background: green;
+  border-radius: 4px;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+}
+
+/* Animated short underline for page headers */
+h1 {
+  position: relative;
+  text-align: center;
+  overflow: visible;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  height: 6px;              /* thicker */
+  width: 30%;               /* shorter, proportional */
+  margin: 10px auto 0;
+  background: green;
+  border-radius: 6px;
+
+  animation: growline 0.8s ease-out forwards;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+@keyframes growline {
+  to { transform: scaleX(1); }
+}
+
+
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+}
+
+/* Longer underline */
+h1::after {
+  width: 60% !important;
+}
+
+
+
+/* centered page header underline */
+.page-header {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+.page-header::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 60%;
+    height: 4px;
+    background: green;
+    border-radius: 4px;
+}
+
+
+
+/* === H1 underline drop animation (centered) === */
+h1 {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0;
+    bottom: -6px;
+    width: 60%;
+    height: 4px;
+    background: green;
+    border-radius: 4px;
+    animation: dropLine 0.6s ease-out forwards;
+}
+@keyframes dropLine {
+    0% {
+        transform: translateX(-50%) translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* === Center ONLY About Page H1 + H2 === */
+.about-page h1, 
+.about-page h2 {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-page h1::after,
+.about-page h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 60%;
+    height: 4px;
+    background: green;
+    border-radius: 4px;
+}
+
+
+
+/* === STRICT ABOUT PAGE HEADER CENTERING FIX === */
+.about-page h1,
+.about-page h2 {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.about-page h1::after,
+.about-page h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 70%;
+    height: 4px;
+    background: green;
+    border-radius: 4px;
+}

@@ -1,0 +1,136 @@
+/* ========== GENERAL ========== */
+.home {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+/* ========== SEARCH BAR ========== */
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 260px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #5ae36f;
+}
+
+.search-button,
+.heart-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #5ae36f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.heart-button {
+  background-color: white;
+  color: #5ae36f;
+  border: 2px solid #5ae36f;
+}
+
+.search-button:hover {
+  background-color: #5ae36f;
+}
+
+.heart-button:hover {
+  background-color: #5ae36f;
+  color: white;
+}
+
+/* ========== MOVIES GRID ========== */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* ========== MOVIE CARD ========== */
+.movie-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(101, 98, 98, 0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-image {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.movie-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ========== FAVORITE BUTTON ========== */
+.fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.fav-icon {
+  font-size: 20px;
+  color: #6b8e86;
+  transition: color 0.3s ease;
+}
+
+.fav-icon.filled {
+  color: #ff0055;
+}
+
+.fav-btn:hover .fav-icon {
+  color: #ff0055;
+}
+
+/* ========== LOADING / ERRORS ========== */
+.loading,
+.no-results,
+.error-message {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #666;
+}
+
+
+
+e5a459669c669f0badabc03c9bc072b0/* MovieCard.css */
