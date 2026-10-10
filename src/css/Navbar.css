@@ -7,7 +7,7 @@
   gap: clamp(24px, 4vw, 64px);
   padding: 24px clamp(24px, 4vw, 64px);
   color: white;
-  background-image: url(../../public/main_header.gif) !important;
+  background-image: url("/main_header.gif") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -26,7 +26,7 @@
   z-index: 1;
 }
 
-/* Brand link with lion icon styled like search button */
+/* Brand link */
 .nav-brand .brand-link {
   display: flex;
   align-items: center;
@@ -36,20 +36,20 @@
   color: rgb(113, 180, 172);
   text-decoration: none;
   padding: 8px 16px;
-  border-radius: 6px;                /* same as search button */
+  border-radius: 6px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  background: radial-gradient(circle, 
-  #2e3a59,   /* deep muted navy */
-  #3d5a6c,   /* elegant slate */
-  #4f7d63,   /* premium green-teal */
-  #9bbf71    /* soft luxury olive highlight */
-) !important;
-
+  background: radial-gradient(
+    circle,
+    #2e3a59,
+    #3d5a6c,
+    #4f7d63,
+    #9bbf71
+  ) !important;
 }
 
 .nav-brand .brand-link:hover {
-  background-image: url(/hover.jpg) !important;         /* match search button */
+  background-image: url("/hover.jpg") !important;
   background-attachment: fixed !important;
   background-size: cover !important;
   background-position: center !important;
@@ -58,18 +58,18 @@
   transform: scale(1.05);
 }
 
-/* Lion icon inside brand link */
+/* Lion icon */
 .lion-icon {
   width: 28px;
   height: 28px;
   margin-right: 10px;
 }
 
-/* ✅ Navbar links container styled in one horizontal line */
+/* Navigation links container */
 .navbar-links {
   display: flex;
   flex: 0 1 auto;
-  flex-direction: row; /* ensure horizontal layout */
+  flex-direction: row;
   font-size: clamp(16px, 1.5vw, 20px) !important;
   font-weight: bold;
   align-items: center !important;
@@ -78,44 +78,43 @@
   margin: 0 !important;
 }
 
-/* Navbar link buttons styled like brand link */
+/* Navigation link buttons */
 .navbar-links .nav-link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   min-height: 54px;
   min-width: 110px;
   width: auto;
-  color: rgb(246, 250, 250) !important;
-  background: radial-gradient(circle, 
-  #4e5568,   /* deep muted navy */
-  #557081,   /* elegant slate */
-  #4f7d63,   /* premium green-teal */
-  #9bbf71    /* soft luxury olive highlight */
-) !important;
-
-  align-items: center;
-  text-align: center;
-  justify-content: center;
   padding: 10px 16px;
+  color: rgb(246, 250, 250) !important;
+  background: radial-gradient(
+    circle,
+    #4e5568,
+    #557081,
+    #4f7d63,
+    #9bbf71
+  ) !important;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   text-decoration: none;
   transform: none;
 }
-  
+
 .navbar-links .nav-link:hover {
-  color: rgb(185, 199, 198); 
+  color: rgb(132, 252, 208) !important;
   text-align: center !important;
-  background-image: url(/nav.png)!important;         /* match search button */
+  background-image: url("/nav.png") !important;
   background-attachment: fixed !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-   color: rgb(132, 252, 208) !important;
   transform: scale(1.05);
 }
 
+/* Mobile menu defaults */
 .nav-menu-toggle {
   display: none;
 }
@@ -124,6 +123,7 @@
   display: none !important;
 }
 
+/* Back to portfolio link */
 .nav-brand .portfolio-link {
   position: static !important;
   display: flex;
@@ -140,14 +140,14 @@
   z-index: 1;
 }
 
-/* Heart icon inside favorite button if used */
+/* Heart icon */
 .heart-icon {
   width: 20px;
   height: 20px;
   margin-right: 8px;
 }
 
-/* Responsive adjustments */
+/* Responsive navigation */
 @media (max-width: 768px) {
   .navbar {
     min-height: 170px;
@@ -173,7 +173,13 @@
     gap: 5px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 6px;
-    background: radial-gradient(circle, #4e5568, #557081, #4f7d63, #9bbf71);
+    background: radial-gradient(
+      circle,
+      #4e5568,
+      #557081,
+      #4f7d63,
+      #9bbf71
+    );
     cursor: pointer;
     z-index: 2;
   }
@@ -252,70 +258,54 @@
     position: static !important;
   }
 }
-  /* transform: scale(1.2);
-  } */
-/* Footer Container */
+
+/* Footer container */
 .footer-container {
-background-image:url(/footer.jpg) !important;
+  background-image: url("/footer.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  font-family: "Arial", sans-serif;
-  padding: 3rem 2rem 1rem 2rem;
-} 
-h1 {
-  position: relative;
-  text-align: center;
-}
-h1::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 50%;
-  margin: 8px auto 0;
-  background: green;
-  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  padding: 3rem 2rem 1rem;
 }
 
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: green;
-  color: white;
-  padding: 8px 10px;
-  border-radius: 50%;
-  font-size: 14px;
-  cursor: pointer;
-  z-index: 999;
-  display: none;
-}
-
-/* Animated short underline for page headers */
+/* General heading styles */
 h1 {
   position: relative;
+  display: table;
+  margin: 0 auto;
   text-align: center;
   overflow: visible;
 }
 
 h1::after {
   content: "";
-  display: block;
-  height: 6px;              /* thicker */
-  width: 30%;               /* shorter, proportional */
-  margin: 10px auto 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  opacity: 0;
+  bottom: -6px;
+  width: 60% !important;
+  height: 4px;
   background: green;
-  border-radius: 6px;
-
-  animation: growline 0.8s ease-out forwards;
-  transform: scaleX(0);
-  transform-origin: center;
+  border-radius: 4px;
+  animation: dropLine 0.6s ease-out forwards;
 }
 
-@keyframes growline {
-  to { transform: scaleX(1); }
+@keyframes dropLine {
+  0% {
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
 }
 
-
-
+/* Back-to-top button */
 #backToTop {
   position: fixed;
   bottom: 20px;
@@ -330,111 +320,45 @@ h1::after {
   display: none;
 }
 
-/* Longer underline */
-h1::after {
-  width: 60% !important;
-}
-
-
-
-/* centered page header underline */
+/* Centered page heading */
 .page-header {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
 }
+
 .page-header::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -8px;
-    width: 60%;
-    height: 4px;
-    background: green;
-    border-radius: 4px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 60%;
+  height: 4px;
+  background: green;
+  border-radius: 4px;
 }
 
-
-
-/* === H1 underline drop animation (centered) === */
-h1 {
-    position: relative;
-    display: table;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
-    opacity: 0;
-    bottom: -6px;
-    width: 60%;
-    height: 4px;
-    background: green;
-    border-radius: 4px;
-    animation: dropLine 0.6s ease-out forwards;
-}
-@keyframes dropLine {
-    0% {
-        transform: translateX(-50%) translateY(-10px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(-50%) translateY(0);
-        opacity: 1;
-    }
-}
-
-
-
-/* === Center ONLY About Page H1 + H2 === */
-.about-page h1, 
-.about-page h2 {
-    position: relative;
-    display: table;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-page h1::after,
-.about-page h2::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -6px;
-    width: 60%;
-    height: 4px;
-    background: green;
-    border-radius: 4px;
-}
-
-
-
-/* === STRICT ABOUT PAGE HEADER CENTERING FIX === */
+/* About page heading alignment */
 .about-page h1,
 .about-page h2 {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 .about-page h1::after,
 .about-page h2::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -6px;
-    width: 70%;
-    height: 4px;
-    background: green;
-    border-radius: 4px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  width: 70%;
+  height: 4px;
+  background: green;
+  border-radius: 4px;
 }
