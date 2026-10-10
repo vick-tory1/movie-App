@@ -7,7 +7,7 @@
   gap: clamp(24px, 4vw, 64px);
   padding: 24px clamp(24px, 4vw, 64px);
   color: white;
-  background-image: url(/main_header.gif) !important;
+  background-image: url(../../public/main_header.gif) !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
