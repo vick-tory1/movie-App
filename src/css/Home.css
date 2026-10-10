@@ -131,6 +131,39 @@
   color: #666;
 }
 
+@media (max-width: 700px) {
+  .home {
+    padding: 16px 12px;
+  }
+
+  .search-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 520px;
+    gap: 10px;
+    margin: 0 auto 24px;
+  }
+
+  .search-input {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+  }
+
+  .search-button,
+  .heart-button {
+    justify-content: center;
+    min-width: 0;
+    min-height: 44px;
+    gap: 5px;
+    padding: 10px 6px;
+    font-size: clamp(11px, 3.5vw, 15px);
+    white-space: nowrap;
+  }
+}
+
 
 
 e5a459669c669f0badabc03c9bc072b0/* MovieCard.css */
