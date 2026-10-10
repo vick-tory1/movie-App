@@ -6,7 +6,15 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className={`navbar${menuOpen ? " menu-open" : ""}`}>
+    <nav
+      className={`navbar${menuOpen ? " menu-open" : ""}`}
+      style={{
+        backgroundImage: 'url("/main_header.gif")',
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="nav-brand">
         <a
           className="portfolio-link"
@@ -26,7 +34,9 @@ function NavBar() {
         type="button"
         aria-controls="movie-navigation-links"
         aria-expanded={menuOpen}
-        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={
+          menuOpen ? "Close navigation menu" : "Open navigation menu"
+        }
         onClick={() => setMenuOpen((open) => !open)}
       >
         <span />
@@ -35,14 +45,26 @@ function NavBar() {
       </button>
 
       <div className="navbar-links" id="movie-navigation-links">
-        <a className="nav-link portfolio-menu-link" href="https://portfolio-coral-seven-21.vercel.app">
+        <a
+          className="nav-link portfolio-menu-link"
+          href="https://portfolio-coral-seven-21.vercel.app"
+        >
           ← Back to Portfolio
         </a>
-        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+
+        <Link
+          to="/"
+          className="nav-link"
+          onClick={() => setMenuOpen(false)}
+        >
           Home
         </Link>
 
-        <Link to="/favorites" className="nav-link" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/favorites"
+          className="nav-link"
+          onClick={() => setMenuOpen(false)}
+        >
           Favorites
         </Link>
       </div>
