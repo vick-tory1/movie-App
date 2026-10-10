@@ -7,7 +7,7 @@
   gap: clamp(24px, 4vw, 64px);
   padding: 24px clamp(24px, 4vw, 64px);
   color: white;
-  background-image: url(../../public/main_header.gif) !important;
+  background-image: url(/main_header.gif) !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -49,7 +49,7 @@
 }
 
 .nav-brand .brand-link:hover {
-  background-image: url(../../public/hover.jpg) !important;         /* match search button */
+  background-image: url(/hover.jpg) !important;         /* match search button */
   background-attachment: fixed !important;
   background-size: cover !important;
   background-position: center !important;
@@ -107,7 +107,7 @@
 .navbar-links .nav-link:hover {
   color: rgb(185, 199, 198); 
   text-align: center !important;
-  background-image: url(../../public/nav.png)!important;         /* match search button */
+  background-image: url(/nav.png)!important;         /* match search button */
   background-attachment: fixed !important;
   background-size: cover !important;
   background-position: center !important;
@@ -256,7 +256,7 @@
   } */
 /* Footer Container */
 .footer-container {
-background-image:url(../../public/footer.jpg) !important;
+background-image:url(/footer.jpg) !important;
   color: #fff;
   font-family: "Arial", sans-serif;
   padding: 3rem 2rem 1rem 2rem;
