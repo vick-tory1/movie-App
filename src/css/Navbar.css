@@ -7,10 +7,14 @@
   gap: clamp(24px, 4vw, 64px);
   padding: 24px clamp(24px, 4vw, 64px);
   color: white;
+
+  /* Navbar background image */
+  background: url("/main_header.gif") center / cover no-repeat !important;
   background-image: url("/main_header.gif") !important;
   background-size: cover !important;
-  background-position: center !important;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
+
   min-height: 200px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
